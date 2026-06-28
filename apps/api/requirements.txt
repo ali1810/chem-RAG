@@ -1,0 +1,22 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+
+# Embeddings + vector search
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+numpy<2
+
+# Chemistry data
+requests>=2.31.0
+pubchempy>=1.0.4
+
+# LLM
+groq>=0.9.0
+openai>=1.35.0
+
+# Utilities
+loguru>=0.7.2
+python-dotenv>=1.0.1
+tiktoken>=0.7.0
