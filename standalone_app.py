@@ -570,12 +570,11 @@ elif page == "📥 Ingest":
                                 if text.strip():
                                     pages_text.append(text)
 
-                            full_text = "
-".join(pages_text)
+                            full_text = chr(10).join(pages_text)
                             doc.close()
 
                             # Clean text
-                            full_text = " ".join(full_text.split())  # normalise whitespace
+                            full_text = " ".join(full_text.split())
 
                             word_count = len(full_text.split())
                             st.info(f"📊 Extracted {len(pages_text)} pages, {word_count:,} words")
@@ -591,7 +590,7 @@ elif page == "📥 Ingest":
                                     full_text,
                                     pdf_source or uploaded.name,
                                 )
-                                st.success(f"✅ Ingested '{pdf_title}' → {n} chunks indexed in FAISS")
+                                st.success(f'✅ Ingested {pdf_title} → {n} chunks indexed in FAISS')
 
                                 # Show preview
                                 with st.expander("Preview extracted text (first 500 chars)"):
